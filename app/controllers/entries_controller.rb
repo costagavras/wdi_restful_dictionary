@@ -1,15 +1,16 @@
 class EntriesController < ApplicationController
 
   def index
-    # here we'll define some @instance_variables to store data from the database for the views to use
-    # render :index
+    @entries = Entry.all
   end
 
   def show
+    @entry = Entry.find(params[:id])
     render :show #can actually be removed bc default behaviour is to match method name to filename in views/entries
   end
 
   def new
+    @new_entry = Entry.new
     render :new
   end
 

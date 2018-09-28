@@ -1,1 +1,12 @@
-<p>This is the entries index page</p>
+<h1>This is the entries index page</h1>
+
+<hr>
+<h3><%=link_to 'New entry', new_entry_path %></h2>
+<hr>
+
+<% @entries.each do |entry|%>
+  <h2><%=link_to entry.word, entry_path(entry)%></h2>
+  <li>Definition: <%=entry.definition%></li>
+  <li>Language: <%=entry.language%></li>
+  <hr>
+<%end%>

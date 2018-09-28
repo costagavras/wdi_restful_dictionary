@@ -1,1 +1,8 @@
-<p>This page will display information about entry number <%= params[:id] %></p>
+<h1>This is the entry # <%= params[:id] %></h1>
+
+  <h2><%=@entry.word%></h2>
+  <li>Definition: <%=@entry.definition%></li>
+  <li>Language: <%=@entry.language%></li>
+  <hr>
+  <br>
+  <h3><%=link_to 'All entries', entries_path %></h3>
