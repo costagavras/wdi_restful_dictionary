@@ -5,4 +5,4 @@
   <li>Language: <%=@entry.language%></li>
   <hr>
   <br>
-  <h3><%=link_to 'All entries', entries_path %></h3>
+  <h3><%=link_to 'All entries', entries_path %> | <%=link_to 'Edit', edit_entry_path %> | <%= link_to "Delete", entry_path(@entry), method: :delete, data: {confirm: "Are you sure you want to delete the word '#{@entry.word}'?"} %></h3>

@@ -1,1 +1,6 @@
-<h1>Well, hello there peeps!</h1>
+<h1>You are editing entry # <%= params[:id] %></h1>
+<hr>
+<%= render 'entry', new_entry: @entry %>
+<hr>
+<h3><%=link_to 'All entries', entries_path %></h3>
+<hr>
